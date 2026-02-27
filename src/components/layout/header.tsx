@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Shield } from "lucide-react";
+import { Shield, Phone, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
@@ -7,21 +8,42 @@ export function Header() {
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-primary">
           <Shield className="h-6 w-6" />
-          <span className="font-bold text-lg">ERM診断</span>
+          <div className="flex flex-col leading-tight">
+            <span className="font-bold text-base">ERM成熟度診断</span>
+            <span className="text-[10px] text-muted-foreground">
+              Powered by 株式会社SIS
+            </span>
+          </div>
         </Link>
-        <nav className="flex items-center gap-6 text-sm">
+        <nav className="flex items-center gap-2 sm:gap-4">
           <Link
             href="/"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
           >
             ホーム
           </Link>
           <Link
             href="/diagnosis"
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             診断を受ける
           </Link>
+          <a
+            href="https://s-i-s.co.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:inline-flex items-center gap-1"
+          >
+            SIS HP
+            <ExternalLink className="h-3 w-3" />
+          </a>
+          <Button asChild size="sm" variant="outline" className="gap-1">
+            <a href="tel:06-6484-5939">
+              <Phone className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">06-6484-5939</span>
+              <span className="sm:hidden">電話</span>
+            </a>
+          </Button>
         </nav>
       </div>
     </header>

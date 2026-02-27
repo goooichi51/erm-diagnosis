@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "ERM成熟度診断 | リスク管理の現在地を知る",
+  title: "ERM成熟度診断｜株式会社SIS",
   description:
-    "無料のERM（全社的リスク管理）成熟度診断テスト。COSO ERMフレームワークに基づく30問の設問で、あなたの組織のリスク管理レベルを5段階で評価します。",
+    "あなたの組織のリスク管理レベルを無料で診断。COSO ERMフレームワークに基づく30問の設問で、全社的リスク管理（ERM）の成熟度を5段階で評価します。株式会社SISが提供するリスクマネジメント診断ツール。",
+  openGraph: {
+    title: "ERM成熟度診断｜株式会社SIS",
+    description:
+      "約5分で完了。あなたの組織のリスク管理レベルを5段階で評価する無料診断テスト。",
+    siteName: "株式会社SIS",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${notoSansJP.variable} antialiased min-h-screen flex flex-col`}
       >
         <Header />
         <main className="flex-1">{children}</main>

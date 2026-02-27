@@ -7,8 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-noto-sans-jp);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -39,31 +38,32 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+/* SISブランドカラー: #1a3a5c(紺), #2c5f8d(ブルー), #4a90e2(アクセントブルー) */
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.985 0.002 240);
-  --foreground: oklch(0.18 0.03 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.03 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.03 250);
-  --primary: oklch(0.35 0.12 250);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.95 0.01 240);
-  --secondary-foreground: oklch(0.25 0.05 250);
-  --muted: oklch(0.96 0.005 240);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.94 0.02 240);
-  --accent-foreground: oklch(0.25 0.05 250);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.01 240);
-  --input: oklch(0.9 0.01 240);
-  --ring: oklch(0.45 0.12 250);
-  --chart-1: oklch(0.35 0.12 250);
-  --chart-2: oklch(0.55 0.15 200);
-  --chart-3: oklch(0.65 0.1 160);
-  --chart-4: oklch(0.7 0.12 80);
-  --chart-5: oklch(0.6 0.18 30);
+  --background: #f7fafd;
+  --foreground: #1a2332;
+  --card: #ffffff;
+  --card-foreground: #1a2332;
+  --popover: #ffffff;
+  --popover-foreground: #1a2332;
+  --primary: #1a3a5c;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f2f7;
+  --secondary-foreground: #1a3a5c;
+  --muted: #f0f5f9;
+  --muted-foreground: #5a6b7d;
+  --accent: #e8f2f7;
+  --accent-foreground: #1a3a5c;
+  --destructive: #dc2626;
+  --border: #d4e0eb;
+  --input: #d4e0eb;
+  --ring: #2c5f8d;
+  --chart-1: #1a3a5c;
+  --chart-2: #2c5f8d;
+  --chart-3: #4a90e2;
+  --chart-4: #64b5f6;
+  --chart-5: #f59e0b;
 }
 
 @layer base {

@@ -11,7 +11,14 @@ import { RadarChart } from "@/components/result/radar-chart";
 import { CategoryBar } from "@/components/result/category-bar";
 import { ImprovementTips } from "@/components/result/improvement-tips";
 import { type DiagnosisResult } from "@/lib/diagnosis/scoring";
-import { Shield, MessageSquare, FileText, ArrowRight } from "lucide-react";
+import {
+  Shield,
+  MessageSquare,
+  FileText,
+  ArrowRight,
+  Phone,
+  ExternalLink,
+} from "lucide-react";
 
 export default function ResultPage() {
   const router = useRouter();
@@ -97,6 +104,7 @@ export default function ResultPage() {
           次のステップ
         </h2>
 
+        {/* レベル別メッセージ */}
         {result.maturityLevel.level <= 2 && (
           <Card className="border-primary/20 bg-primary/5">
             <CardContent className="pt-6">
@@ -108,13 +116,10 @@ export default function ResultPage() {
                   <h3 className="font-semibold mb-1">
                     リスク管理体制の構築が急務です
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    無料相談で現状を整理し、改善の第一歩を踏み出しましょう
+                  <p className="text-sm text-muted-foreground">
+                    現状のリスク管理体制には早急な改善が必要です。株式会社SISの専門コンサルタントが、
+                    御社の状況に合わせた具体的な改善プランをご提案いたします。
                   </p>
-                  <Button size="sm">
-                    初回無料相談を予約する
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
                 </div>
               </div>
             </CardContent>
@@ -132,13 +137,10 @@ export default function ResultPage() {
                   <h3 className="font-semibold mb-1">
                     基盤はできています。次のステップへ
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    さらに高度化するための具体的な戦略をご提案します
+                  <p className="text-sm text-muted-foreground">
+                    リスク管理の基本的な仕組みは整っています。さらに高度化するための
+                    具体的な戦略を、SISの専門家がご提案いたします。
                   </p>
-                  <Button size="sm">
-                    専門家に相談する
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
                 </div>
               </div>
             </CardContent>
@@ -156,18 +158,45 @@ export default function ResultPage() {
                   <h3 className="font-semibold mb-1">
                     高い水準を維持・向上させましょう
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    最新のリスク動向に対応するための継続的なアドバイスをご提供します
+                  <p className="text-sm text-muted-foreground">
+                    優れたリスク管理体制です。最新のリスク動向への対応と
+                    継続的な改善について、SISがアドバイスいたします。
                   </p>
-                  <Button size="sm">
-                    専門家に相談する
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Button>
                 </div>
               </div>
             </CardContent>
           </Card>
         )}
+
+        {/* SIS問い合わせ導線 */}
+        <Card className="border-primary">
+          <CardContent className="pt-6">
+            <h3 className="font-bold text-center mb-4">
+              SISの専門家に相談する
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-3">
+              <Button asChild className="w-full gap-2">
+                <a href="tel:06-6484-5939">
+                  <Phone className="h-4 w-4" />
+                  電話で相談する
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="w-full gap-2">
+                <a
+                  href="https://s-i-s.co.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  SIS公式サイトへ
+                </a>
+              </Button>
+            </div>
+            <p className="text-xs text-center text-muted-foreground mt-3">
+              受付時間：平日 9:00〜18:00（土日祝除く）
+            </p>
+          </CardContent>
+        </Card>
 
         <Card>
           <CardContent className="pt-6">
