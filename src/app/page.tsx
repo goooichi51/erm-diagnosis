@@ -64,7 +64,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base px-8 border-white/40 text-white hover:bg-white/10">
+              <Button asChild size="lg" className="text-base px-8 bg-white/20 text-white border border-white hover:bg-white/30">
                 <a href="mailto:info@s-i-s.co.jp">
                   <MessageSquare className="mr-2 h-5 w-5" />
                   メールで相談する
