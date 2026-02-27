@@ -22,11 +22,21 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+      <section className="relative py-24 md:py-36 overflow-hidden">
+        {/* 背景写真 */}
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* 紺オーバーレイ */}
+        <div className="absolute inset-0 bg-[#1a3a5c]/75" />
+
         <div className="max-w-5xl mx-auto px-4 relative">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
               <Image
                 src="/sislogo.jpg"
                 alt="SIS"
@@ -36,33 +46,33 @@ export default function Home() {
               />
               株式会社SIS提供｜無料診断テスト
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight text-white">
               御社のリスク管理体制、
               <br />
-              <span className="text-primary">このままで大丈夫ですか？</span>
+              <span className="text-[#64b5f6]">このままで大丈夫ですか？</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-lg text-white/80 mb-8 leading-relaxed">
               情報漏洩、内部不正、取引先リスク——
               <br className="hidden md:block" />
               企業を取り巻くリスクは年々複雑化しています。
               <br className="hidden md:block" />
-              <strong>約5分の無料診断</strong>で、組織のリスク管理レベルを可視化しませんか。
+              <strong className="text-white">約5分の無料診断</strong>で、組織のリスク管理レベルを可視化しませんか。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-base px-8">
+              <Button asChild size="lg" className="text-base px-8 bg-white text-primary hover:bg-white/90">
                 <Link href="/diagnosis">
                   無料で診断する
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-base px-8">
+              <Button asChild size="lg" variant="outline" className="text-base px-8 border-white/40 text-white hover:bg-white/10">
                 <a href="tel:06-6484-5939">
                   <Phone className="mr-2 h-5 w-5" />
                   電話で相談する
                 </a>
               </Button>
             </div>
-            <div className="flex items-center justify-center gap-6 mt-6 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center gap-6 mt-6 text-sm text-white/60">
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />
                 約5分
