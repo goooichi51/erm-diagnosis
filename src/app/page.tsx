@@ -144,16 +144,23 @@ export default function Home() {
       </section>
 
       {/* 解決策：診断で分かること */}
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+      <section className="relative py-20 overflow-hidden">
+        <Image
+          src="/section-analytics.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#1a3a5c]/80" />
+        <div className="max-w-5xl mx-auto px-4 relative">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-white">
             まずは「現在地」を知ることから
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto">
             SISのERM成熟度診断で、御社のリスク管理体制を5つの観点から可視化します
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <BarChart3 className="h-6 w-6 text-primary" />
@@ -164,7 +171,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Target className="h-6 w-6 text-primary" />
@@ -175,7 +182,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <TrendingUp className="h-6 w-6 text-primary" />
@@ -218,25 +225,32 @@ export default function Home() {
       </section>
 
       {/* SIS信頼構築セクション */}
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        <Image
+          src="/section-meeting.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#1a3a5c]/80" />
+        <div className="max-w-5xl mx-auto px-4 relative">
           <div className="flex justify-center mb-4">
             <Image
               src="/sislogo.jpg"
               alt="株式会社SIS"
               width={64}
               height={64}
-              className="rounded-full"
+              className="rounded-full border-2 border-white/30"
             />
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-white">
             なぜSISのERM診断なのか
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto">
             リスクマネジメントの専門家集団が設計した診断テスト
           </p>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -252,7 +266,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -268,7 +282,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -284,7 +298,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-lg bg-white/95 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
