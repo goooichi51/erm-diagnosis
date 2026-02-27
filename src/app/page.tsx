@@ -204,7 +204,7 @@ export default function Home() {
             国際基準に基づく5つの評価軸
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            COSO ERM 2017フレームワーク準拠の体系的な評価で、網羅的に診断します
+            COSO ERMフレームワーク準拠の体系的な評価で、網羅的に診断します
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {categories.map((cat, i) => (
@@ -275,7 +275,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-semibold mb-2">国際基準COSO ERMに準拠</h3>
                     <p className="text-sm text-muted-foreground">
-                      世界標準のリスク管理フレームワークであるCOSO ERM 2017に基づく設問設計。
+                      世界標準のリスク管理フレームワークであるCOSO ERMに基づく設問設計。
                       グローバルな視点での評価が可能です。
                     </p>
                   </div>
