@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -26,7 +27,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 relative">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Shield className="h-4 w-4" />
+              <Image
+                src="/sislogo.jpg"
+                alt="SIS"
+                width={20}
+                height={20}
+                className="rounded-full"
+              />
               株式会社SIS提供｜無料診断テスト
             </div>
             <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
@@ -203,6 +210,15 @@ export default function Home() {
       {/* SIS信頼構築セクション */}
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4">
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/sislogo.jpg"
+              alt="株式会社SIS"
+              width={64}
+              height={64}
+              className="rounded-full"
+            />
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             なぜSISのERM診断なのか
           </h2>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Shield, Phone, MapPin, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { Phone, MapPin, ExternalLink } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,8 +9,14 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* 会社情報 */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <Shield className="h-5 w-5" />
+            <div className="flex items-center gap-3 mb-3">
+              <Image
+                src="/sislogo.jpg"
+                alt="株式会社SIS"
+                width={36}
+                height={36}
+                className="rounded-full border border-primary-foreground/20"
+              />
               <span className="font-bold">株式会社SIS</span>
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">

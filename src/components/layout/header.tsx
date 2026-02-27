@@ -1,13 +1,20 @@
 import Link from "next/link";
-import { Shield, Phone, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { Phone, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
     <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-primary">
-          <Shield className="h-6 w-6" />
+        <Link href="/" className="flex items-center gap-2.5 text-primary">
+          <Image
+            src="/sislogo.jpg"
+            alt="株式会社SIS"
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
           <div className="flex flex-col leading-tight">
             <span className="font-bold text-base">ERM成熟度診断</span>
             <span className="text-[10px] text-muted-foreground">
