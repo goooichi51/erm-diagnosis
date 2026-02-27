@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, ExternalLink } from "lucide-react";
 
 export function Footer() {
   return (
@@ -31,10 +31,9 @@ export function Footer() {
             <h3 className="font-semibold mb-3 text-sm">お問い合わせ</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
-                <a href="tel:06-6484-5939" className="hover:text-primary-foreground transition-colors">
-                  06-6484-5939
-                  <span className="text-xs ml-1">(平日 9:00-18:00)</span>
+                <Mail className="h-4 w-4 shrink-0" />
+                <a href="mailto:info@s-i-s.co.jp" className="hover:text-primary-foreground transition-colors">
+                  info@s-i-s.co.jp
                 </a>
               </li>
               <li className="flex items-start gap-2">

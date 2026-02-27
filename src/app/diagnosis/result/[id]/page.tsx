@@ -16,7 +16,7 @@ import {
   MessageSquare,
   FileText,
   ArrowRight,
-  Phone,
+  Mail,
   ExternalLink,
 } from "lucide-react";
 
@@ -176,9 +176,9 @@ export default function ResultPage() {
             </h3>
             <div className="grid sm:grid-cols-2 gap-3">
               <Button asChild className="w-full gap-2">
-                <a href="tel:06-6484-5939">
-                  <Phone className="h-4 w-4" />
-                  電話で相談する
+                <a href="mailto:info@s-i-s.co.jp">
+                  <Mail className="h-4 w-4" />
+                  メールで相談する
                 </a>
               </Button>
               <Button asChild variant="outline" className="w-full gap-2">
