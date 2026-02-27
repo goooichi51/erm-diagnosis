@@ -13,7 +13,6 @@ import {
   FileText,
   AlertTriangle,
   Building2,
-  Phone,
   MessageSquare,
 } from "lucide-react";
 import { categories } from "@/lib/diagnosis/questions";
@@ -66,9 +65,9 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8 border-white/40 text-white hover:bg-white/10">
-                <a href="tel:06-6484-5939">
-                  <Phone className="mr-2 h-5 w-5" />
-                  電話で相談する
+                <a href="mailto:info@s-i-s.co.jp">
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  メールで相談する
                 </a>
               </Button>
             </div>
@@ -336,11 +335,10 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-sm text-primary-foreground/60 mt-6">
-            お電話でのご相談も受け付けております：
-            <a href="tel:06-6484-5939" className="underline text-primary-foreground/80 hover:text-primary-foreground">
-              06-6484-5939
+            ご相談はメールでも受け付けております：
+            <a href="mailto:info@s-i-s.co.jp" className="underline text-primary-foreground/80 hover:text-primary-foreground">
+              info@s-i-s.co.jp
             </a>
-            （平日 9:00-18:00）
           </p>
         </div>
       </section>

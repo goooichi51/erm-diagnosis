@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, ExternalLink } from "lucide-react";
+import { Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -45,10 +45,10 @@ export function Header() {
             <ExternalLink className="h-3 w-3" />
           </a>
           <Button asChild size="sm" variant="outline" className="gap-1">
-            <a href="tel:06-6484-5939">
-              <Phone className="h-3.5 w-3.5" />
-              <span className="hidden sm:inline">06-6484-5939</span>
-              <span className="sm:hidden">電話</span>
+            <a href="mailto:info@s-i-s.co.jp">
+              <Mail className="h-3.5 w-3.5" />
+              <span className="hidden sm:inline">メール相談</span>
+              <span className="sm:hidden">メール</span>
             </a>
           </Button>
         </nav>
