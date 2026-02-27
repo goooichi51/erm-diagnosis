@@ -23,7 +23,29 @@ export default function Home() {
     <div>
       {/* Hero */}
       <section className="relative py-20 md:py-28 overflow-hidden">
+        {/* 背景グラデーション + 装飾 */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+        {/* 装飾: 浮遊する円 */}
+        <div className="absolute top-12 left-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-8 right-[5%] w-80 h-80 bg-[#4a90e2]/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-[60%] w-40 h-40 bg-primary/3 rounded-full blur-2xl" />
+        {/* 装飾: ドットグリッド */}
+        <svg className="absolute top-8 right-[15%] opacity-10" width="120" height="120" viewBox="0 0 120 120">
+          {Array.from({ length: 36 }).map((_, i) => (
+            <circle key={i} cx={(i % 6) * 22 + 11} cy={Math.floor(i / 6) * 22 + 11} r="2" fill="#1a3a5c" />
+          ))}
+        </svg>
+        <svg className="absolute bottom-16 left-[8%] opacity-10" width="80" height="80" viewBox="0 0 80 80">
+          {Array.from({ length: 16 }).map((_, i) => (
+            <circle key={i} cx={(i % 4) * 22 + 11} cy={Math.floor(i / 4) * 22 + 11} r="2" fill="#1a3a5c" />
+          ))}
+        </svg>
+        {/* 装飾: リング */}
+        <svg className="absolute top-20 right-[25%] opacity-[0.07]" width="100" height="100" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#1a3a5c" strokeWidth="2" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#2c5f8d" strokeWidth="1.5" />
+        </svg>
+
         <div className="max-w-5xl mx-auto px-4 relative">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -80,8 +102,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ウェーブ区切り */}
+      <div className="relative -mt-1">
+        <svg viewBox="0 0 1440 60" fill="none" className="w-full h-auto" preserveAspectRatio="none">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,30 1440,40 L1440,60 L0,60 Z" fill="white" />
+        </svg>
+      </div>
+
       {/* 課題提示セクション */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white relative overflow-hidden">
+        {/* 装飾: 斜めライン */}
+        <svg className="absolute -right-4 top-1/4 opacity-[0.04]" width="200" height="300" viewBox="0 0 200 300">
+          <line x1="0" y1="0" x2="200" y2="300" stroke="#1a3a5c" strokeWidth="1" />
+          <line x1="30" y1="0" x2="200" y2="250" stroke="#1a3a5c" strokeWidth="1" />
+          <line x1="60" y1="0" x2="200" y2="200" stroke="#1a3a5c" strokeWidth="1" />
+          <line x1="90" y1="0" x2="200" y2="150" stroke="#1a3a5c" strokeWidth="1" />
+        </svg>
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             こんな課題はありませんか？
@@ -90,7 +126,8 @@ export default function Home() {
             リスク管理の不備は、ある日突然、経営危機として表面化します
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-amber-200 bg-amber-50/30">
+            <Card className="border-amber-200 bg-amber-50/30 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-300" />
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
                   <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -103,7 +140,8 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-amber-200 bg-amber-50/30">
+            <Card className="border-amber-200 bg-amber-50/30 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-300" />
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
                   <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -116,7 +154,8 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-amber-200 bg-amber-50/30">
+            <Card className="border-amber-200 bg-amber-50/30 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-300" />
               <CardContent className="pt-6">
                 <div className="h-12 w-12 rounded-lg bg-amber-100 flex items-center justify-center mb-4">
                   <AlertTriangle className="h-6 w-6 text-amber-600" />
@@ -134,8 +173,13 @@ export default function Home() {
       </section>
 
       {/* 解決策：診断で分かること */}
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 relative overflow-hidden">
+        {/* 背景パターン: ドット */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: "radial-gradient(#1a3a5c 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }} />
+        <div className="max-w-5xl mx-auto px-4 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             まずは「現在地」を知ることから
           </h2>
@@ -143,9 +187,10 @@ export default function Home() {
             SISのERM成熟度診断で、御社のリスク管理体制を5つの観点から可視化します
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-md bg-white relative overflow-hidden group hover:shadow-lg transition-shadow">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-[#2c5f8d]" />
               <CardContent className="pt-6">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
                   <BarChart3 className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">成熟度レベル判定</h3>
@@ -154,9 +199,10 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-md bg-white relative overflow-hidden group hover:shadow-lg transition-shadow">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2c5f8d] to-[#4a90e2]" />
               <CardContent className="pt-6">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
                   <Target className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">強み・弱みの可視化</h3>
@@ -165,9 +211,10 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm bg-muted/30">
+            <Card className="border-0 shadow-md bg-white relative overflow-hidden group hover:shadow-lg transition-shadow">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4a90e2] to-[#64b5f6]" />
               <CardContent className="pt-6">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
                   <TrendingUp className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">改善の方向性</h3>
@@ -180,9 +227,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ウェーブ区切り */}
+      <div className="relative -mb-1">
+        <svg viewBox="0 0 1440 60" fill="none" className="w-full h-auto" preserveAspectRatio="none">
+          <path d="M0,20 C240,60 480,0 720,30 C960,60 1200,10 1440,20 L1440,60 L0,60 Z" fill="white" />
+        </svg>
+      </div>
+
       {/* 5つの評価カテゴリ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 bg-white relative overflow-hidden">
+        {/* 装飾: 大きなリング */}
+        <svg className="absolute -left-20 top-1/2 -translate-y-1/2 opacity-[0.03]" width="300" height="300" viewBox="0 0 300 300">
+          <circle cx="150" cy="150" r="140" fill="none" stroke="#1a3a5c" strokeWidth="3" />
+          <circle cx="150" cy="150" r="100" fill="none" stroke="#2c5f8d" strokeWidth="2" />
+          <circle cx="150" cy="150" r="60" fill="none" stroke="#4a90e2" strokeWidth="1.5" />
+        </svg>
+        <div className="max-w-5xl mx-auto px-4 relative">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             国際基準に基づく5つの評価軸
           </h2>
@@ -190,33 +250,57 @@ export default function Home() {
             COSO ERM 2017フレームワーク準拠の体系的な評価で、網羅的に診断します
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {categories.map((cat, i) => (
-              <Card key={cat.id} className="text-center border shadow-sm">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-primary/20 mb-2">
-                    0{i + 1}
-                  </div>
-                  <h3 className="font-semibold mb-1 text-sm">{cat.name}</h3>
-                  <p className="text-xs text-muted-foreground">
-                    {cat.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+            {categories.map((cat, i) => {
+              const colors = [
+                "from-[#1a3a5c] to-[#2c5f8d]",
+                "from-[#2c5f8d] to-[#3a75a8]",
+                "from-[#3a75a8] to-[#4a90e2]",
+                "from-[#4a90e2] to-[#64b5f6]",
+                "from-[#64b5f6] to-[#90caf9]",
+              ];
+              return (
+                <Card key={cat.id} className="text-center border shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${colors[i]}`} />
+                  <CardContent className="pt-6">
+                    <div className="text-3xl font-bold text-primary/20 mb-2">
+                      0{i + 1}
+                    </div>
+                    <h3 className="font-semibold mb-1 text-sm">{cat.name}</h3>
+                    <p className="text-xs text-muted-foreground">
+                      {cat.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* SIS信頼構築セクション */}
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4">
+      <section className="py-16 relative overflow-hidden">
+        {/* 背景グラデーション */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f7fafd] via-[#eef4fa] to-[#f7fafd]" />
+        {/* 装飾: ドットグリッド */}
+        <svg className="absolute top-12 left-[5%] opacity-[0.06]" width="140" height="140" viewBox="0 0 140 140">
+          {Array.from({ length: 49 }).map((_, i) => (
+            <circle key={i} cx={(i % 7) * 22 + 5} cy={Math.floor(i / 7) * 22 + 5} r="1.5" fill="#1a3a5c" />
+          ))}
+        </svg>
+        <svg className="absolute bottom-12 right-[5%] opacity-[0.06]" width="100" height="100" viewBox="0 0 100 100">
+          {Array.from({ length: 25 }).map((_, i) => (
+            <circle key={i} cx={(i % 5) * 22 + 5} cy={Math.floor(i / 5) * 22 + 5} r="1.5" fill="#1a3a5c" />
+          ))}
+        </svg>
+
+        <div className="max-w-5xl mx-auto px-4 relative">
           <div className="flex justify-center mb-4">
             <Image
               src="/sislogo.jpg"
               alt="株式会社SIS"
               width={64}
               height={64}
-              className="rounded-full"
+              className="rounded-full shadow-lg"
             />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
@@ -225,8 +309,8 @@ export default function Home() {
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             リスクマネジメントの専門家集団が設計した診断テスト
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-sm">
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-0 shadow-md bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -242,7 +326,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-md bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -258,7 +342,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-md bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -274,7 +358,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-md bg-white/80 backdrop-blur-sm hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -295,8 +379,18 @@ export default function Home() {
       </section>
 
       {/* 診断CTA */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+      <section className="py-16 bg-primary text-primary-foreground relative overflow-hidden">
+        {/* 装飾: 大きな半透明円 */}
+        <div className="absolute -top-20 -right-20 w-72 h-72 bg-white/5 rounded-full" />
+        <div className="absolute -bottom-16 -left-16 w-56 h-56 bg-white/5 rounded-full" />
+        {/* 装飾: 斜めライン */}
+        <svg className="absolute right-[10%] top-0 bottom-0 opacity-[0.05]" width="100" height="100%" viewBox="0 0 100 200" preserveAspectRatio="none">
+          <line x1="0" y1="0" x2="100" y2="200" stroke="white" strokeWidth="1" />
+          <line x1="30" y1="0" x2="100" y2="150" stroke="white" strokeWidth="1" />
+          <line x1="60" y1="0" x2="100" y2="100" stroke="white" strokeWidth="1" />
+        </svg>
+
+        <div className="max-w-3xl mx-auto px-4 text-center relative">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             まずは現状を知ることから始めましょう
           </h2>
